@@ -8,10 +8,11 @@ export default function Page() {
     <main className="h-auto pt-5 flex flex-col justify-center items-center gap-5">
       {posts.map((singlePost) => {
         return (
-          <div className="h-[10vh] w-[20vw] flex items-center gap-5">
-            <Link href={`/blog/${singlePost.id}`} key={singlePost.id}>
-              {singlePost.title}
-            </Link>
+          <div
+            className="h-[10vh] w-[20vw] flex items-center gap-5"
+            key={singlePost.id}
+          >
+            <Link href={`/blog/${singlePost.id}`}>{singlePost.title}</Link>
             -&gt;
           </div>
         );
